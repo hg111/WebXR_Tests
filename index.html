@@ -9,7 +9,7 @@
 	<body>
 		<script src="js/three.js"></script>
 		<script>
-			//import { VRButton } from 'three/examples/jsm/webxr/VRButton.js';
+			import { VRButton } from 'three/examples/jsm/webxr/VRButton.js';
 		
 			var scene = new THREE.Scene();
 			var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
@@ -17,8 +17,8 @@
 			var renderer = new THREE.WebGLRenderer();
 			renderer.setSize( window.innerWidth, window.innerHeight );
 			document.body.appendChild( renderer.domElement );
-			//document.body.appendChild( VRButton.createButton( renderer ) );
-			//renderer.xr.enabled = true;
+			document.body.appendChild( VRButton.createButton( renderer ) );
+			renderer.xr.enabled = true;
 
 			var geometry = new THREE.BoxGeometry();
 			var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
